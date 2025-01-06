@@ -163,7 +163,7 @@ body {
     bottom: -30px; /* Distance par rapport au bas de la page */
     right: -20px;  /* Distance par rapport au bord droit */
     z-index: 9999; /* S'assurer que le GIF est au-dessus des autres éléments */
-    width: 100px; /* Ajustez la taille du GIF selon vos besoins */
+    width: 50px; /* Ajustez la taille du GIF selon vos besoins */
     height: auto; /* Préserver les proportions */
     pointer-events: none; /* Le GIF ne gêne pas les clics sur d'autres éléments */
 }
