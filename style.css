@@ -1,8 +1,14 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+@font-face {
+  font-family: 'Papyrus';
+  src: url('font/Papyrus.ttf') format('truetype');
+}
 
 body {
-  font-family: 'Libre Baskerville', serif;
+  font-family: 'Papyrus', sans-serif;
+}
+
+body {
+  font-family: 'Papyrus;
   background: linear-gradient(to bottom, #F0F4F8, #C8D6E5);
   color: #333;
   margin: 0;
