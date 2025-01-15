@@ -94,7 +94,7 @@ body {
 .photo-grid img {
   width: auto; /* Conserve la taille originale des images */
   max-width: 90%; /* Empêche les images d'être trop grandes */
-  height: auto;
+  height: 100%;
   border: 1px solid #333; /* Ajout d'un bord pour le style simple */
   cursor: pointer; /* Change le curseur pour indiquer que l'image est cliquable */
 }
