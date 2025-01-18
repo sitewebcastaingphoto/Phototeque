@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phototèque Castaing</title>
+    <style>
+        @font-face {
+            font-family: 'Papyrus';
+            src: url('font/Papyrus.ttf') format('truetype');
+        }
+
+        body {
+            font-family: 'Papyrus', sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #f7e3b5;
+            color: #8b5e3c;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #f7e3b5;
+            color: #8b5e3c;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        h2 {
+            margin: 5px 0 20px 0;
+        }
+
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .image-container img {
+            max-width: 90%;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Phototèque Castaing</h1>
+        <h2>C'est dans les vieux pots qu'on fait la meilleure soupe</h2>
+    </header>
+
+    <div class="image-container">
+        <img src="images/photo1.jpg" alt="Photo 1" onclick="openModal(this)">
+        <img src="images/photo2.jpg" alt="Photo 2" onclick="openModal(this)">
+        <img src="images/photo3.jpg" alt="Photo 3" onclick="openModal(this)">
+        <img src="images/photo4.jpg" alt="Photo 4" onclick="openModal(this)">
+        <img src="images/photo5.jpg" alt="Photo 5" onclick="openModal(this)">
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img id="modal-img" src="" alt="Modal Image">
+    </div>
+
+    <footer>
+        2024 Castaing
+    </footer>
+
+    <script>
+        function openModal(img) {
+            const modal = document.getElementById('modal');
+            const modalImg = document.getElementById('modal-img');
+
+            modalImg.src = img.src;
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'none';
+        }
+
+        // Close modal when clicking outside the image
+        document.getElementById('modal').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) closeModal();
+        });
+    </script>
+</body>
+</html>
