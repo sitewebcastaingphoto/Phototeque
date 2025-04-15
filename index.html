@@ -42,12 +42,13 @@
             padding: 20px;
         }
 
-        .image-container img {
-            max-width: 90%;
-            height: auto;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
+      .image-container img {
+    width: auto;
+    max-height: 600px; /* ou 80px si tu veux encore plus petit */
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
 
         .image-container img:hover {
             transform: scale(1.05);
